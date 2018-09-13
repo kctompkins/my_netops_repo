@@ -1,0 +1,11 @@
+---
+  - name: Validate Variables
+    gather_facts: no
+    hosts: csr
+    tasks:
+      - name: Print group_vars ntp1
+        debug:
+          msg: "Group Var ntp1 {{ ntp1 }}"
+      - name: Print host_vars ignw-csr timezone
+        debug:
+          msg: "Host Var timezone {{ timezone }}"
